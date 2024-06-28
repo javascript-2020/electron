@@ -7,7 +7,6 @@
             host        = arg('host','127.0.0.1'),
             port        = arg('port',2222),
             title       = arg('title','terminal');
-            title       = `${title} - ${username}@${host}:${port}`;
 
         function arg(name,def){return process.argv.reduce((acc,s)=>(s.startsWith(`${name}=`) && s.slice(name.length+1)) || acc,def)}
         
@@ -27,7 +26,7 @@
         
         
         var html    = `
-              <title>${title}</title>
+              <title>${title} - ${username}@${host}:${port}</title>
               <link rel=stylesheet href='https://cdn.jsdelivr.net/npm/@xterm/xterm/css/xterm.min.css'>
               <style>
                     html { height:100% }
