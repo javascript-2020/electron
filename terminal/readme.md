@@ -14,15 +14,14 @@ node launch.js
 
 it will start a node.js container and connect to it
 
+first start may take a while if it has to cache modules
+
 <br>
 
 ---
 
 <br>
 
-first start may take a while if it has to cache modules
-
-<br>
 
 download ``` terminal.js ``` using the download button in the top right
 
