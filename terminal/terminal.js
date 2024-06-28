@@ -14,8 +14,8 @@
         console.log(username,password,host,port);
         
         var {app,BrowserWindow}  = require('electron');
-        var webPreferences       = {nodeIntegration:true,contextIsolation:false};
         app.whenReady().then(()=>{
+              var webPreferences    = {nodeIntegration:true,contextIsolation:false};
               var win   = new BrowserWindow({webPreferences,icon});
               win.maximize();
               win.webContents.openDevTools();
