@@ -1,4 +1,4 @@
-//  https://github.com/javascript-2020/stackoverflow/blob/main/term/term.js
+//  https://github.com/javascript-2020/electron/blob/main/terminal/terminal.js
 
         console.log('terminal.js');
         
