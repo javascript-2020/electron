@@ -15,11 +15,13 @@
         
         var {app,BrowserWindow}  = require('electron');
         app.whenReady().then(()=>{
+          
               var webPreferences    = {nodeIntegration:true,contextIsolation:false};
               var win   = new BrowserWindow({webPreferences,icon});
               win.maximize();
               win.webContents.openDevTools();
               win.loadURL(`data:text/html;base64,${btoa(html)}`);
+              
         });
         
         
