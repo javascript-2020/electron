@@ -12,6 +12,8 @@ username=root password=node host=127.0.0.1 port=2222
 
 to launch, without installing ( caches modules )
 
+first start may take a while if it has to cache modules
+
 ```
 npx -p ssh2 electron -y terminal
 ```
@@ -37,7 +39,5 @@ node launch.js
 ```
 
 it will start a node.js container and connect to it
-
-first start may take a while if it has to cache modules
 
 <br>
