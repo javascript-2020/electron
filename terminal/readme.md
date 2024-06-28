@@ -3,11 +3,15 @@
 
 for ease of use just download ``` launch.js ``` and run it, it will start a node.js container and connect to it
 
+https://github.com/javascript-2020/docker/tree/main
+
+<br>
+
 first start may take a while if it has to cache modules
 
 <br>
 
-download ``` term.js ``` using the download button in the top right
+download ``` terminal.js ``` using the download button in the top right
 
 config variables can be specified on the command line, any or none to use defaults
 
@@ -23,4 +27,10 @@ to launch, without installing ( caches modules )
 npx -p ssh2 electron -y term
 ```
 
+```
+npx -p ssh2 electron -y term username=root password=node host=127.0.0.1 port=2222
+```
+
 <br>
+
+
