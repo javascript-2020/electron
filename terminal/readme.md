@@ -38,6 +38,6 @@ run it
 node launch.js
 ```
 
-it will start a node.js container and connect to it
+it will start a container and connect to it
 
 <br>
