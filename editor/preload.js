@@ -6,33 +6,14 @@
         
         contextBridge.exposeInMainWorld('electronAPI',{
           
-              readFile: (filePath) => ipcRenderer.invoke('read-file', filePath),
+              readFile: ({path})=>ipcRenderer.invoke('read-file',{path}),
               
-/*              
-              readFile:async filePath=>{
-                    
-                    var err;            
-                    try{
-                      
-                          return await fs.promises.readFile(filePath, 'utf8');
-                          
-                    }//try
-                    catch(err2){
-                          err   = err2;
-                    }//catch
-                    if(err){
-                          console.error(err);
-                          return null;
-                    }
-                      
-              },          
-*/
 
               onOpenFile:callback=>{
                                                                                 console.log('onOpenFile');
-                  ipcRenderer.on('open-file',(event,filePath)=>{
+                  ipcRenderer.on('open-file',(event,{path})=>{
                                                                                 console.log('open-file');
-                        callback(filePath);
+                        callback({path});
                   })
               
               },
