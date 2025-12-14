@@ -42,7 +42,7 @@
           
               var resolve,promise=new Promise(res=>resolve=res);
               
-              fs.readDir(path,{withFileTypes:true},(error,data)=>{
+              fs.readdir(path,{withFileTypes:true},(error,data)=>{
                 
                     if(error){
                           resolve({error});
@@ -58,7 +58,7 @@
                                 var file    = {
                                       name    : entry.name
                                 };
-                                files.push(name);
+                                files.push(file);
                           }
                           if(entry.isDirectory()){
                                 var dir   = {
