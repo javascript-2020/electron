@@ -18,6 +18,7 @@
               
               },
               
+              dirRead       : ({path})=>ipcRenderer.invoke('dir-read',{path}),
               
         });
 
