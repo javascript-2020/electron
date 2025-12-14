@@ -1,7 +1,7 @@
 
 
         var url   = 'https://ext-code.com/utils/editors/editor/v2.0/editor-v2.0.html';
-        var url   = 'https://libs.ext-code.com/html/electron-fs/test/electron-fs-test-v2.0.html';
+        //var url   = 'https://libs.ext-code.com/html/electron-fs/test/electron-fs-test-v2.0.html';
         
         var path    = require('path');
         var fs      = require('fs');
@@ -14,7 +14,7 @@
         
         function create(){
 
-              var win   = new BrowserWindow({width:1600,height:1200,
+              var win   = new BrowserWindow({width:2400,height:1200,
                     webPreferences      : {preload:path.join(__dirname,'preload.js'),
                     contextIsolation    : true,
                     nodeIntegration     : false,
@@ -28,6 +28,9 @@
               if(args.length>0){
                                                                                 console.log(args);
                     var fpath    = args.at(-1);
+                    if(fpath.endsWith('editor.exe')){
+                          return;
+                    }
                                                                                 console.log('Opening file:',fpath);
                     win.webContents.once('dom-ready', () => {
                                                                                 console.log('dom-ready');
@@ -60,9 +63,5 @@
               */  
         });
 
-/*        
-ipcMain.handle('read-file', async (event, filePath) => {
-  return fs.promises.readFile(filePath, 'utf8');
-});
-*/
+
 
