@@ -32,7 +32,23 @@
         
         file.write    = function({path,buf}){
           
-              return fs.writeFileSync(path,buf);
+              var err;
+              try{
+                
+                    fs.writeFileSync(path,buf);
+                    
+              }//try
+              catch(err2){
+                
+                    err   = err2;
+                    
+              }//catch
+              if(err){
+                    var error   = err.toString();
+                    return {error};
+              }
+              var ok    = 'ok';
+              return {ok};
               
         }//write
         
