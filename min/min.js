@@ -1,6 +1,17 @@
         
         
-        var url   = 'https://ext-code.com';
+        
+/*
+
+  install electron globally
+  npm i -g electron
+  
+  electron min.js
+  
+*/
+
+        var file    = 'index.html';
+        var url     = 'https://ext-code.com';
 
         
         var {app,BrowserWindow}   = require('electron');
