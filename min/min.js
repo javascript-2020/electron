@@ -21,7 +21,13 @@
         
         function createWindow() {
           
-              var win   = new BrowserWindow({title:'MyApp',width:1900,height:1000});
+              var win   = new BrowserWindow({
+                    title             : 'MyApp',
+                    width             : 1900,
+                    height            : 1000,
+                    webPreferences    : {backgroundThrottling:false}
+
+              });
               win.webContents.openDevTools();
               
               //win.loadFile(file);
