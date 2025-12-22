@@ -14,12 +14,16 @@
         
         function create(){
 
+              var preload   = 
               var win   = new BrowserWindow({width:2400,height:1200,
-                    webPreferences      : {preload:path.join(__dirname,'preload.js'),
-                    contextIsolation    : true,
-                    nodeIntegration     : false,
-                    sandbox             : true,             
-              }});
+                    webPreferences      : {
+                          preload                 : path.join(__dirname,'preload.js'),
+                          contextIsolation        : true,
+                          nodeIntegration         : false,
+                          sandbox                 : true,
+                          backgroundThrottling    : false
+                    }
+              });
               
               win.loadURL(url)
               win.webContents.openDevTools();
