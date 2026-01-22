@@ -1,0 +1,2 @@
+npm install -g electron-packager
+electron-packager ./ editor --platform=win32 --arch=x64 --icon=editor.ico --overwrite
