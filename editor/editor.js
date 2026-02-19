@@ -13,8 +13,8 @@
         app.whenReady().then(create);
         
         function create(){
-
-              var preload   = 
+        
+        
               var win   = new BrowserWindow({width:2400,height:1200,
                     webPreferences      : {
                           preload                 : path.join(__dirname,'preload.js'),
@@ -40,32 +40,33 @@
                                                                                 console.log('dom-ready');
                           win.webContents.send('open-file',{path:fpath});
                           
-                    });                    
+                    });
               }
-  
+              
               
         }//create
         
         app.on('certificate-error',(event,webContents,url,error,certificate,callback)=>{
-          
+        
               event.preventDefault();
               callback(true);
               
         });
-
-
-
+        
+        
+        
         app.on('open-file', (event, filePath) => {
                                                                                 console.log('app.on("open-file")');
               event.preventDefault();
-              /*  
+              /*
               if (win) {
                 sendFileToRenderer(filePath);
               } else {
                 app.once('browser-window-created', () => sendFileToRenderer(filePath));
               }
-              */  
+              */
         });
-
-
-
+        
+        
+        
+        
